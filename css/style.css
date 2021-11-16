@@ -49,7 +49,6 @@ button {
   background: url('img/back.png') no-repeat;
   background-position: center;
   background-size: cover;
-  margin: 0 auto;
 }
 
 .about h1 {
