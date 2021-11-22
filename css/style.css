@@ -9,6 +9,10 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 20px;
+  position: sticky;
+  top: 0;
+  background-color: #fff;
+  z-index: 1;
 }
 
 .header__logo {
@@ -40,7 +44,7 @@ button {
 
 button:hover {
   background-color: #f6980c;
-  box-shadow: 0 16px 36px rgba(246 152 12 / 20%)
+  box-shadow: 0 16px 36px rgba(246 152 12 / 20%);
 }
 
 .about {
@@ -51,7 +55,7 @@ button:hover {
   padding-left: 20px;
   padding-top: 115px;
   padding-bottom: 115px;
-  background: url('../img/back.png') no-repeat;
+  background: url("../img/back.png") no-repeat;
   background-position: center;
   background-size: cover;
 }
@@ -85,6 +89,8 @@ button:hover {
 .about__sun-image {
   width: 100px;
   height: 100px;
+  animation: rotation 10s linear infinite;
+  position: absolute;
 }
 
 .form__container {
@@ -92,8 +98,8 @@ button:hover {
 }
 
 .form {
-  background-color: #1D263A;
-  color:#fff;
+  background-color: #1d263a;
+  color: #fff;
   padding-top: 115px;
   padding-bottom: 115px;
   text-align: center;
@@ -129,7 +135,8 @@ button:hover {
   padding-bottom: 15px;
 }
 
-.form input, .form select {
+.form input,
+.form select {
   font-style: 18px;
   color: #213053;
   height: 60px;
@@ -138,7 +145,7 @@ button:hover {
   border: none;
 }
 
-.form__submit{
+.form__submit {
   font-style: 18px;
   font-weight: 600;
 }
@@ -184,4 +191,24 @@ footer {
 .footer__links a {
   margin-bottom: 15px;
   font-weight: 800;
+}
+
+.loader-2 {
+  height: 50px;
+  width: 50px;
+  background-color: #fff;
+  border-radius: 100%;
+  border: 10px solid transparent;
+  border-top-color: #17a96d;
+  margin-bottom: 40px;
+  animation: spin 1.5s ease-in-out infinite;
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }

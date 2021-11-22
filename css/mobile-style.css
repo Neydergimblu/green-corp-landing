@@ -1,0 +1,56 @@
+@media (max-width: 320px) {
+  body {
+    background-color: white;
+  }
+
+  header {
+    padding: 10px;
+  }
+
+  header a {
+    margin-right: 5px;
+  }
+
+  .header__logo {
+    height: 20px;
+  }
+
+  .about {
+    flex-direction: column-reverse;
+    padding-right: 10px;
+    padding-left: 10px;
+  }
+
+  .about h1 {
+    font-size: 36px;
+    line-height: 40px;
+  }
+  
+  .about p {
+    font-size: 18px;
+    line-height: 30px;
+    opacity: 0.8;
+  }
+
+  .about__info {
+    max-width: 320px;
+  }
+  
+  .about__image {
+    width: 280px;
+  }
+
+  .about__sun-image {
+    width: 75px;
+    height: 75px;
+  }
+
+  .form {
+    padding-right: 10px;
+    padding-left: 10px;
+  }
+
+  .footer__container {
+    flex-direction: column;
+  }
+}

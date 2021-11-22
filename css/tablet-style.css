@@ -1,0 +1,23 @@
+@media (max-width: 720px) {
+  body {
+    background-color: white;
+  }
+
+  header a {
+    margin-right: 5px;
+  }
+
+  .about h1 {
+    font-size: 36px;
+    line-height: 40px;
+  }
+  
+  .about__image {
+    width: 280px;
+  }
+
+  .about__sun-image {
+    width: 75px;
+    height: 75px;
+  }
+}
