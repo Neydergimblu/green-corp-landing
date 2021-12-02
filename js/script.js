@@ -137,22 +137,22 @@ switch (sign) {
 temp = 25;
 weather = "clear";
 
-if (temp>=25 && weather === "clear") {
+if (temp >= 25 && weather === "clear") {
 	activity = "golf";
-} else if (temp>=10 && temp<24 && weather === "clear") {
+} else if (temp >= 10 && temp < 24 && weather === "clear") {
 	activity = "bowling";
 } else {
 	activity = "hiking";
 }
 
 console.log(10 / "2");
-console.log(typeof(10 / "2"));
+console.log(typeof (10 / "2"));
 
 // alert(null+undefined);
 
 let num = 10;
 if (num % 3 === 0) {
-	num=5;
+	num = 5;
 }
 
 let message = "Ckbirjv rjhjnrbq gfhjkm"
@@ -176,10 +176,53 @@ switch (m) {
 		break;
 }
 
-console.log(false =='0');
+console.log(false == '0');
 
 console.log(typeof typeof 1);
 
 let gt = 10;
 let answer = 10 != gt ? "Yes" : "No";
 console.log(answer);
+
+
+//Практическое задание 5.1
+let start = 0;
+let end = 50;
+
+
+
+for (let i = start, result = 0; i <= end; i++) {
+	if (i % 5 === 0) {
+		result += i;
+		console.log(result);
+	}
+}
+
+//Практическое задание 5.2
+// let word = "мир";
+// let wordResult="";
+
+// for (let i = word.length-1; i >= 0; i--) {
+// 	wordResult += word[i];
+// }
+
+// console.log(wordResult);
+
+//Практическое задание 5.3
+let word = "Велосипед";
+let wordResult="";
+
+for (let i = word.length-1; i >= 0; i--) {
+	wordResult += word[i];
+}
+
+console.log(wordResult);
+
+console.log(word.toLowerCase());
+console.log(wordResult.toLowerCase());
+
+if (wordResult.toLowerCase() === word.toLowerCase()) {
+	console.log("Слово является палиндромом!");
+} else {
+	console.log("Слово не является палиндромом!");
+}
