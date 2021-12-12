@@ -212,3 +212,155 @@ footer {
     transform: rotate(360deg);
   }
 }
+
+.features {
+  background-color: #fff;
+  padding: 115px 60px;
+}
+
+.cards {
+  display: grid;
+  gap: 50px;
+  grid-template-columns: repeat(3, 1fr);
+}
+.card {
+  padding: 35px 40px 25px 40px;
+  border: 1px solid #d9e4e6;
+  border-radius: 5px;
+}
+.card__logo {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: #ccc;
+  font-size: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card__logo-1 {
+  color: #ffb406;
+}
+
+.card__logo-2 {
+  font-weight: 600;
+  color: #ad1714;
+}
+
+.card__logo-3 {
+  color: #22a030;
+}
+
+.card__title {
+}
+
+.card__text {
+  font-size: 16px;
+  line-height: 22px;
+  opacity: 0.8;
+}
+
+.features__border {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  border: 1px solid #e6eaf4;
+}
+
+.features__feedback {
+  display: flex;
+}
+
+.features__feedback-left {
+  margin-right: 10px;
+}
+
+.features__feedback-left h2 {
+  font-size: 48px;
+}
+
+.features__feedback-left p {
+  font-size: 18px;
+  line-height: 26px;
+  opacity: 0.7;
+}
+.features__feedback-right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.features__box {
+  padding: 30px 40px 25px 40px;
+  color: #fff;
+  border-radius: 25px;
+}
+
+.features__box h3 {
+  margin-top: 0;
+  margin-bottom: 20px;
+  font-size: 48px;
+}
+
+.features__savings-box {
+  background-color: #dc5e26;
+  box-shadow: 0 6px 0 rgb(221 95 38 / 20%);
+  margin-right: 30px;
+  height: 165px;
+}
+
+.features__rate-box {
+  background-color: #1d263a;
+  box-shadow: 0 6px 0 rgb(29 38 58 / 20%);
+}
+
+.stars {
+  margin: 0;
+}
+
+.fas {
+}
+
+.fa-star {
+  color: #ff7039;
+}
+
+.promo {
+  display: flex;
+}
+
+.promo__image {
+  background: url("/img/promo.jpg");
+  background-size: cover;
+  background-position: center center;
+  flex-shrink: 0;
+  width: 50%;
+}
+
+.promo__right {
+  background-color: #dd5f26;
+  padding: 160px 60px;
+}
+
+.promo__card {
+  padding: 30px;
+  font-size: 20px;
+  line-height: 22px;
+  font-weight: 500;
+  border-radius: 25px;
+  background-color: #fff;
+}
+
+.promo__card p {
+  opacity: 0.8;
+}
+
+.promo__card p::before {
+  content: "";
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #ec6b29;
+  display: inline-block;
+  margin-right: 10px;
+}
