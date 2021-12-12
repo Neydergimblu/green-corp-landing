@@ -1,4 +1,4 @@
-@media (max-width: 500px) {
+@media (max-width: 320px) {
   body {
     background-color: white;
   }
@@ -92,7 +92,7 @@
   }
 
   .promo {
-    flex-direction: column;
+    flex-direction: column-reverse;
   }
 
   .promo__image {

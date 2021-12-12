@@ -312,6 +312,7 @@ footer {
 .features__rate-box {
   background-color: #1d263a;
   box-shadow: 0 6px 0 rgb(29 38 58 / 20%);
+  min-height: 165px;
 }
 
 .stars {
@@ -330,7 +331,7 @@ footer {
 }
 
 .promo__image {
-  background: url("img/promo.jpg");
+  background: url("/img/promo.jpg");
   background-size: cover;
   background-position: center center;
   flex-shrink: 0;
@@ -363,4 +364,9 @@ footer {
   background-color: #ec6b29;
   display: inline-block;
   margin-right: 10px;
+}
+
+.promo__card button {
+  display: block;
+  margin: 0 auto;
 }
