@@ -672,3 +672,10 @@ compactArray(['Вася', 'Петя', undefined, 'Иван'])
 
 // let objectArray = [{ name: 'Иван' }, { name: 'Петя' }, { name: 'Саша' }];
 // console.log(objectArray.toString());
+
+// for (let i=0;i<=10;) {
+// 	i++;
+// }
+// console.log(i);
+
+console.log(String([1,true,[],{}]));

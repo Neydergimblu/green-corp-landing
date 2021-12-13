@@ -20,4 +20,17 @@
     width: 75px;
     height: 75px;
   }
+
+  .features__feedback {
+    flex-direction: column;
+  }
+
+  .cards {
+    gap: 10px;
+  }
+
+  .features {
+    background-color: #fff;
+    padding: 50px 30px;
+  }
 }
