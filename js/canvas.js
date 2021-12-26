@@ -8,6 +8,7 @@ function generateDecimalBetween(left, right) {
 class Bubble {
 	constructor(canvas) {
 		this.canvas = canvas;
+		
 
 		this.getCanvasSize();
 
@@ -17,6 +18,7 @@ class Bubble {
 	getCanvasSize() {
 		this.canvasWidth = this.canvas.clientWidth;
 		this.canvasHeight = this.canvas.clientHeight;
+		console.log(this.canvasWidth,this.canvasHeight);
 	}
 
 	init() {
@@ -55,8 +57,9 @@ class CanvasBackground {
 	}
 
 	canvasSize() {
-		this.canvas.width = this.canvas.offsetWidth * this.dpr;
-		this.canvas.height = this.canvas.offsetHeight * this.dpr;
+		this.about = document.getElementById("about");
+		this.canvas.width = this.about.offsetWidth * this.dpr;
+		this.canvas.height = this.about.offsetHeight * this.dpr;
 
 		this.ctx.scale(this.dpr, this.dpr);
 	}
