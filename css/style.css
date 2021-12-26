@@ -5,6 +5,14 @@ body {
   width: 100%;
 }
 
+.lesson {
+  height: 500px;
+}
+
+#lesson__canvas {
+  border: 1px solid #666;
+}
+
 header {
   display: flex;
   justify-content: space-between;
@@ -49,6 +57,7 @@ button:hover {
 }
 
 .about {
+  position: relative;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -253,9 +262,6 @@ footer {
   color: #22a030;
 }
 
-.card__title {
-}
-
 .card__text {
   font-size: 16px;
   line-height: 22px;
@@ -320,9 +326,6 @@ footer {
   margin: 0;
 }
 
-.fas {
-}
-
 .fa-star {
   color: #ff7039;
 }
@@ -370,4 +373,11 @@ footer {
 .promo__card button {
   display: block;
   margin: 0 auto;
+}
+
+.orb-canvas {
+  position: absolute;
+  top:0;
+  right: 0;
+  height: 100%;
 }
