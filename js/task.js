@@ -1605,3 +1605,84 @@
 // ctx.lineTo(30,30);
 // ctx.lineTo(0,0);
 // ctx.fill();
+
+// let result = window.history.state;
+// console.log(result);
+
+// let tag = document.querySelector('.header__controls');
+
+// console.log(tag.tagName.toLocaleLowerCase());
+
+//Практическое задание 1.4.
+// let tag = document.querySelectorAll('.target');
+// console.log(tag[tag.length -1].tagName.toLowerCase());
+
+//Практическое задание 1.5
+// let tag = document.querySelector('.price');
+// let result = Number(tag.innerText)*2;
+// tag.innerText = result;
+
+// console.log(tag)
+
+//Практическое задание 1.6
+// let tag = document.querySelectorAll('.price');
+
+// let summ = 0;
+// for (let key of tag) {
+// 	let result = Number(key.innerText);
+// 	console.log(result);
+// 	summ +=result;
+// }
+
+// console.log(summ);
+
+//Практическое задание 1.7
+// let tag = document.querySelector('.content');
+// console.log(tag.innerHTML);
+// let result = tag.innerHTML.replace(/(<p>)/g,'<b>');
+// result = result.replace(/(<\/p>)/g,'</b>');
+// console.log(result);
+// tag.innerHTML = result;
+// console.log(tag);
+
+//Практическое задание 1.8
+// let tag = document.querySelector('.links');
+// console.log(tag.innerHTML);
+// let result = "<a>" + tag.innerHTML + "</a>";
+// tag.innerHTML = result;
+// console.log(tag.innerHTML);
+
+//Практическое задание 1.9 и 1.10
+// let tag = document.querySelectorAll('.numeric');
+// console.log(tag);
+// let result = 0;
+// for (let key of tag) {
+// 	result += Number(key.innerText);
+// 	if (Number(key.innerText)<0) {
+// 		let result = "<b>" + key.innerHTML + "</b>";
+// 		key.innerHTML = result;
+// 	}
+// }
+// console.log(result);
+
+//Практическое задание 1.10
+// let result = 0;
+// let elems = document.getElementsByClassName("numeric");
+// console.log(elems);
+// for (let key of elems) {
+// 	result += Number(key.innerHTML);
+// }
+// console.log(result);
+
+//Практическое задание 1.11
+// let cars = [];
+// let tag = document.querySelector('#cars');
+// console.log(tag);
+// let findLi = tag.querySelectorAll('li');
+// console.log(findLi);
+// for (let key of findLi) {
+// 	cars.push(key.innerHTML);
+// }
+// console.log(cars);
+
+console.log(document.body.nodeValue);
