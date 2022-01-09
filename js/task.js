@@ -1685,4 +1685,374 @@
 // }
 // console.log(cars);
 
-console.log(document.body.nodeValue);
+// console.log(document.body.nodeValue);
+
+// Практическое задание 2.1.
+//Напишите скрипт, который создает новый элемент <p> в переменной new_element и добавляет его в тег с идентификатором root. Созданный тег <p> должен содержать в себе фразу Ура! Мой скрипт отработал верно!
+
+// let new_element = document.createElement('p');
+// new_element.innerHTML = 'Ура! Мой скрипт отработал верно!';
+
+// let result = document.querySelector('#root');
+
+// result.appendChild(new_element);
+
+// Практическое задание 2.2.
+//В HTML-документе есть тег <p> c идентификатором title. Напишите скрипт, который создает новый элемент <h2> в переменной new_element с текстовым содержимым Сегодня солнечно, минус 15 и добавляет новый элемент сразу после тега с идентификатором title.
+
+// let new_element = document.createElement('h2');
+// new_element.innerHTML = 'Сегодня солнечно, минус 15';
+
+// let result = document.querySelector('#title');
+
+// result.insertAdjacentElement('afterend', new_element);
+
+// Практическое задание 2.3
+//В HTML-документе задан тег <ul> c элементами <li> внутри. Напишите скрипт, который создает новый элемент <li> с текстовым содержимым Велосипед в переменной new_element и добавляет его в начало списка <ul>.
+
+// let new_element = document.createElement('li');
+// new_element.innerHTML = 'Велосипед';
+
+// let result = document.querySelector('ul');
+
+// result.insertAdjacentElement('afterbegin', new_element);
+
+// Практическое задание 2.4
+// В HTML-документе есть несколько тегов <div>. Напишите скрипт, который всем тегам <div> добавляет класс adds.
+
+// let result = document.querySelectorAll('div');
+
+// for (let key of result) {
+// 	key.classList = "adds";
+// }
+
+// Практическое задание 2.5
+// В HTML-документе есть несколько тегов <p>. Напишите скрипт, который присваивает каждому тегу идентификатор — от значения p_1 и до p_<n>. Тут n — количество параграфов.
+
+// let result = document.querySelectorAll('p');
+
+// let i=1;
+// for (let key of result) {
+// 	key.id = `p_${i}`;
+// 	i++;
+// }
+
+// Практическое задание 2.6
+// В HTML-документе заданы теги <p>. Напишите скрипт, который удаляет теги, внутри которых хранится текстовое значение Delete.
+
+// let result = document.querySelectorAll('p');
+
+// for (let key of result) {
+// 	if (key.innerText === "Delete") {
+// 		key.remove();
+// 	}
+// }
+
+// Практическое задание 2.7
+// В скрипте объявлен массив values, который состоит из чисел. В HTML-документе есть множество тегов <p> с классом elems. Необходимо дописать скрипт так, чтобы он удалил все теги <p> с классом elems, значение которых входит в массив values.
+
+// let values = [10, 50, 100];
+
+// let result = document.querySelectorAll('p');
+
+// for (let key of result) {
+// 	for (let massKey of values) {
+// 		if (Number(key.innerText) === massKey) {
+// 			key.remove();
+// 		}
+// 	}
+// }
+
+// Практическое задание 2.8
+// В HTML-документе заданы два <div> тега с идентификаторами div1 и div2. Напишите скрипт, который позволит перенести содержимое тега с идентификатором div1 в конец тега с идентификатором div2
+
+// let div1 = document.querySelector('#div1');
+// let div2 = document.querySelector('#div2');
+
+// let oneTransferElement = div1.firstElementChild;
+// console.log(oneTransferElement);
+// let twoTransferElement = oneTransferElement.nextElementSibling
+// console.log(twoTransferElement);
+
+// div2.append(oneTransferElement,twoTransferElement);
+
+// Практическое задание 2.9
+// В HTML-документе есть тег <ul> c идентификатором first. Внутри этого тега есть теги <li>. Напишите скрипт, который создает новый тег <li> в переменной new_element и добавляет в элемент <ul> с идентификатором first. После добавления нового элемента выведите в консоль общее количество тегов <li> в теге <ul> с идентификатором first.
+
+// let new_element = document.createElement('li');
+// new_element.innerHTML = 'new';
+
+// let element = document.querySelector('#first');
+
+// element.appendChild(new_element);
+
+// console.log(element.querySelectorAll('li').length);
+
+// Практическое задание 2.10
+// В скрипте объявлена переменная values, которая содержит массив из строк. В HTML-верстке есть два тега <div> с классами div1 и div2. Допишите скрипт так, чтобы все теги <p> из тега с идентификатором div1, значение которого встречается в списке values, переместились в тег с идентификатором div2.
+
+// let values = ["велосипед", "ролики", "лыжи"];
+
+// let div1 = document.querySelector('#div1');
+// let div2 = document.querySelector('#div2');
+
+// let paragraph = div1.querySelectorAll('p');
+// for (let key of paragraph) {
+// 	for(let valuesKey of values) {
+// 		if (key.innerText === valuesKey) {
+// 			div2.appendChild(key);
+// 		}
+// 	}
+// }
+
+// Практическое задание 2.11
+// В скрипте объявлена переменная task, в которой хранится список из строк. В HTML-верстке есть тег <div> с идентификатором root. Допишите скрипт так, чтобы на основе значений списка сформировались теги <p> и добавились в элемент с идентификатором root.
+
+// const tasks = ["Проверить документы", "Отправить начальству", "Организовать собрание"];
+
+// let div1 = document.querySelector('#root');
+
+// function task (tag,text) {
+// 	let b = document.createElement(`${tag}`);
+// 	b.innerText = text;
+// 	return b;
+// }
+
+// for(let key of tasks) {
+// 	let value = task('p',key);
+// 	div1.append(value);
+// }
+
+// Практическое задание 2.12
+// Напишите программу, которая считает количество <div>-, <p>- и <h2>-тегов и записывает его в объект tags, как в примере. Выведите сформированный объект в консоль.
+
+// const tags = {"div": 0, "p": 0, "h2": 0};
+
+// let divTag = document.querySelectorAll('div');
+// let pTag = document.querySelectorAll('p');
+// let h2Tag = document.querySelectorAll('h2');
+
+// tags["div"] = divTag.length;
+// tags["p"] = pTag.length;
+// tags["h2"] = h2Tag.length;
+
+// console.log(tags);
+
+// Практическое задание 2.13
+// В HTML-документе есть тег <ul> с идентификатором tasks, и внутри него есть несколько тегов <li> с текстом. Напишите скрипт, который позволяет отсортировать элементы <li> в теге <ul> по длине содержимого.
+
+// let ulTag = document.querySelector('#tasks');
+// let liTag = ulTag.querySelectorAll('li');
+
+// const tasks = [];
+
+// for (let key of liTag) {
+// 	tasks.push(key.innerText);
+// }
+
+// tasks.sort().reverse();
+// ulTag.innerHTML='';
+
+// function task (tag,text) {
+// 	let b = document.createElement(`${tag}`);
+// 	b.innerText = text;
+// 	return b;
+// }
+
+// for(let key of tasks) {
+// 	let value = task('li',key);
+// 	ulTag.append(value);
+// }
+
+// Практическое задание 3.1.
+// В HTML-документе задан тег <div> с идентификатором div_elem. Напишите скрипт, который добавит в стиль данного элемента ширину и высоту по 100 пикселей.
+
+// let divTag = document.querySelector('#div_elem');
+// divTag.setAttribute('style','width: 100px; height: 100px;');
+
+// Практическое задание 3.2.
+// В HTML-документе задан тег <p> с идентификатором rainbow. Напишите скрипт, который указывает в стиле синий цвет текста (#2980b9).
+
+// let divTag = document.querySelector('#rainbow');
+// divTag.setAttribute('style','color: #2980b9');
+
+// Практическое задание 3.3.
+// В HTML-документе есть тег <label> и тег <input> с идентификатором target. Необходимо написать скрипт, который присваивает тегу <label> атрибут, позволяющий привязать его к тегу <input>. В результате при клике мышью на <label> тег <input> должен стать активным (в него должен переместиться курсор).
+
+// let inputTag = document.querySelector('#target');
+// let labelTag = inputTag.parentElement.previousElementSibling;
+
+// console.log(labelTag);
+// labelTag.setAttribute('for','target');
+
+// Практическое задание 3.4.
+// В HTML-документе есть тег <p> c идентификатором rainbow. Внутри этого тега указано число. Реализуйте скрипт, который делает преобразование в зависимости от следующих условий:
+
+//Если числовое значение находится в диапазоне от 1 до 9 включительно, должно меняться значение атрибута style. Цвет текста — на красный (#c0392b).
+//Если числовое значение находится в диапазоне от 10 до 20 включительно — на коричневый (#e17055).
+//В ином случае — на желтый (#fdcb6e).
+
+// let pTag = document.querySelector('#rainbow');
+// console.log(pTag);
+// let number = Number(pTag.innerText);
+// console.log(number);
+
+// if (number>0 && number<=9) {
+// 	pTag.setAttribute('style','color: #c0392b');
+// } else if (number>9 && number<=20) {
+// 	pTag.setAttribute('style','color: #e17055');
+// } else {
+// 	pTag.setAttribute('style','color: #fdcb6e');
+// }
+
+
+// Практическое задание 3.5.
+// В HTML-документе есть тег <div> с идентификатором photo. Внутри этого тега указана ссылка на картинку. Необходимо написать скрипт, который:
+
+// заменит ссылку на тег <img> с этой картинкой
+// укажет размеры картинки в атрибуте style 100 на 100 пикселей
+
+// let divTag = document.querySelector('#photo');
+// let url = divTag.innerHTML;
+// console.log(url);
+
+// let imgTag = document.createElement('img');
+// imgTag.setAttribute('src',url);
+// imgTag.setAttribute('style','width: 100px; height: 100px;');
+
+// divTag.innerHTML='';
+// divTag.append(imgTag);
+
+// Практическое задание 3.6.
+// В HTML-документе задан тег <select> c идентификатором numbers. Напишите скрипт, который добавит внутрь этого тега несколько тегов <option> со значениями от 10 до 550 с шагом 10. Значение у тега <option> должно быть указано внутри и в атрибуте value.
+
+// let selectTag = document.querySelector('#numbers');
+
+
+// for (i=10;i<=550;i+=10) {
+// 	let optionTag = document.createElement('option');
+// 	selectTag.append(optionTag);
+// 	optionTag.innerText = i;
+// 	optionTag.setAttribute('value', i);
+// }
+
+
+// Практическое задание 3.7.
+// В HTML-документе задан тег <select>. В скрипте объявлена переменная countries, в которой указаны некоторые страны. Доработайте скрипт так, чтобы в тег <select> добавились теги <option> по одному на каждую страну из массива countries. В качестве значения тега option укажите название страны, а в качестве атрибута — value первые две буквы страны в нижнем регистре (маленькими буквами).
+
+// const countries = ["Armenia", "Russia", "Germany", "France", "Georgia"];
+
+// let selectTag = document.querySelector('select');
+// console.log(selectTag);
+
+// for (let key of countries) {
+// 	let optionTag = document.createElement('option');
+// 	selectTag.append(optionTag);
+// 	optionTag.innerText = key;
+// 	optionTag.setAttribute('value', key.substring(0,2).toLowerCase());
+// }
+
+// Практическое задание 4.1.
+// В HTML-документе задан тег <button> с идентификатором btn и тег <p> с идентификатором val. Напишите скрипт, который выводит в консоль содержимое тега <p> при клике на кнопку.
+
+// function buttonClick() {
+// 	const elem = document.querySelector('#val');
+// 	console.log(elem.innerText);
+// }
+
+// const button = document.querySelector("#btn");
+// button.addEventListener("click", buttonClick);
+
+// Практическое задание 4.2.
+
+// function buttonClick() {
+// 	const elem = document.querySelector('#val');
+// 	console.log(elem.value);
+// }
+
+// const button = document.querySelector("#btn");
+// button.addEventListener("click", buttonClick);
+
+// Практическое задание 4.3.
+// function buttonClick() {
+// 	const elem = document.querySelector('#square');
+// 	elem.setAttribute('style','width: 90px; height: 90px;');
+// }
+
+// const button = document.querySelector("#square");
+// button.addEventListener("click", buttonClick);
+
+// Практическое задание 4.4.
+// function buttonClick() {
+// 	const elem = document.querySelector('#clicker');
+// 	count = elem.innerHTML;
+// 	count++;
+// 	elem.innerHTML = count;
+// }
+
+// const button = document.querySelector("#clicker");
+// button.addEventListener("click", buttonClick);
+
+// Практическое задание 4.5.
+// function buttonClick() {
+// 	const elem = document.querySelector('#points');
+// 	elem.lastElementChild.remove();
+
+// }
+
+// const button = document.querySelector("#delete");
+// button.addEventListener("click", buttonClick);
+
+// Практическое задание 4.6.
+// function buttonClick() {
+// 	this.style.opacity = 0;
+// }
+
+// const button = document.querySelector("#square");
+// button.addEventListener("click", buttonClick);
+
+// Практическое задание 4.7.
+// function buttonClick() {
+// 	const elem = document.querySelector(".copy");
+// 	const elemCopy = elem.cloneNode(true);
+// 	elem.parentElement.append(elemCopy);
+// }
+
+// const button = document.querySelector(".copy");
+// button.addEventListener("click", buttonClick);
+
+
+// Практическое задание 4.8.
+// function buttonClick() {
+// 	count = this.innerHTML;
+// 	count++;
+// 	this.innerHTML = count;
+// }
+
+// const button = document.querySelectorAll("p");
+// for (let key of button) {
+// 	key.addEventListener("click", buttonClick);
+// }
+
+// Практическое задание 4.9.
+
+let div1Tag = document.querySelector('#div1');
+let div2Tag = document.querySelector('#div2');
+
+let paragraph = div1Tag.querySelectorAll('p');
+for (let oneKey of paragraph) {
+	oneKey.addEventListener("click", teleportOneDiv);
+}
+
+let paragraph2 = div2Tag.querySelectorAll('p');
+for (let twoKey of paragraph2) {
+	twoKey.addEventListener("click", teleportTwoDiv);
+}
+
+function teleportOneDiv () {
+	div2Tag.appendChild(this);
+}
+
+function teleportTwoDiv () {
+	div1Tag.appendChild(this);
+}

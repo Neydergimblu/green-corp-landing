@@ -18,10 +18,18 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 20px;
-  position: sticky;
-  top: 0;
-  background-color: #fff;
+  position: fixed;
+  left: 0;
+  right: 0;
+  /* top: 0; */
+  background-color: transparent;
   z-index: 1;
+  transition: background 0.25s ease, box-shadow 0.2s ease;
+}
+
+.header__scrolled {
+  background-color: #fff;
+  box-shadow: 0 12px 34px -11px rgb(65 62 101 / 10%);
 }
 
 .header__logo {
@@ -63,7 +71,7 @@ button:hover {
   align-items: center;
   padding-right: 20px;
   padding-left: 20px;
-  padding-top: 115px;
+  padding-top: 200px;
   padding-bottom: 115px;
   background: url("../img/back.png") no-repeat;
   background-position: center;
@@ -377,7 +385,7 @@ footer {
 
 .orb-canvas {
   position: absolute;
-  top:0;
+  top: 0;
   right: 0;
   height: 100%;
 }
